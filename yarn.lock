@@ -5910,6 +5910,7 @@ __metadata:
     jquery: ^3.7.1
     regenerator-runtime: ^0.13.9
     stimulus: ^3.2.2
+    stimulus-use: ^0.52.2
     webpack: ^5.74.0
     webpack-cli: ^4.10.0
     webpack-notifier: ^1.15.0
@@ -6269,6 +6270,16 @@ __metadata:
   version: 1.5.0
   resolution: "statuses@npm:1.5.0"
   checksum: c469b9519de16a4bb19600205cffb39ee471a5f17b82589757ca7bd40a8d92ebb6ed9f98b5a540c5d302ccbc78f15dc03cc0280dd6e00df1335568a5d5758a5c
+  languageName: node
+  linkType: hard
+
+"stimulus-use@npm:^0.52.2":
+  version: 0.52.2
+  resolution: "stimulus-use@npm:0.52.2"
+  peerDependencies:
+    "@hotwired/stimulus": ">= 3"
+    hotkeys-js: ">= 3"
+  checksum: 812121fb980ae85962c492289e00fd23c7bcfe3e0777fbded9bd62266a321e9042c243fa4fb59573e4a262cb7fb4fd2df1e408cc32ce8da7f1a0e65e4b11b177
   languageName: node
   linkType: hard
 

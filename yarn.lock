@@ -1444,6 +1444,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@kurkle/color@npm:^0.3.0":
+  version: 0.3.2
+  resolution: "@kurkle/color@npm:0.3.2"
+  checksum: 79e97b31f8f6efb28c69d373f94b0c7480226fe8ec95221f518ac998e156444a496727ce47de6d728eb5c3369288e794cba82cae34253deb0d472d3bfe080e49
+  languageName: node
+  linkType: hard
+
 "@leichtgewicht/ip-codec@npm:^2.0.1":
   version: 2.0.5
   resolution: "@leichtgewicht/ip-codec@npm:2.0.5"
@@ -1513,6 +1520,16 @@ __metadata:
   peerDependencies:
     "@hotwired/stimulus": ^3.0
   checksum: 03f8784724efcb919ce059bfe4827d6ad0f1980ff0202e6c94fe1a52c4f0057e343a6351d29adf501dac014db86db17a0f8a4483f3e65862822ea3a4dd872a52
+  languageName: node
+  linkType: hard
+
+"@symfony/ux-chartjs@file:vendor/symfony/ux-chartjs/assets::locator=root-workspace-0b6124%40workspace%3A.":
+  version: 1.1.0
+  resolution: "@symfony/ux-chartjs@file:vendor/symfony/ux-chartjs/assets#vendor/symfony/ux-chartjs/assets::hash=ece1e0&locator=root-workspace-0b6124%40workspace%3A."
+  peerDependencies:
+    "@hotwired/stimulus": ^3.0.0
+    chart.js: ^3.4.1 || ^4.0
+  checksum: b9cdf71f7e1e0831eae3cd252263d3ee42fb6db91745cb94907e0911af03f708c5b488df9db2d03bfd2599c81d56bcb3811ae5fa8ce462c5cb5ed5ece875fc58
   languageName: node
   linkType: hard
 
@@ -2597,6 +2614,15 @@ __metadata:
     ansi-styles: ^4.1.0
     supports-color: ^7.1.0
   checksum: fe75c9d5c76a7a98d45495b91b2172fa3b7a09e0cc9370e5c8feb1c567b85c4288e2b3fded7cfdd7359ac28d6b3844feb8b82b8686842e93d23c827c417e83fc
+  languageName: node
+  linkType: hard
+
+"chart.js@npm:^3.4.1 || ^4.0":
+  version: 4.4.3
+  resolution: "chart.js@npm:4.4.3"
+  dependencies:
+    "@kurkle/color": ^0.3.0
+  checksum: 94c8d174b0d3414d50f145d4faa00bd12417bc48b18f96ac6c56f6225ec23cdc085038dddf45f77e472c5034d97e44cc23fbe35beb70d906addddd632a8c2ada
   languageName: node
   linkType: hard
 
@@ -5904,8 +5930,10 @@ __metadata:
     "@babel/preset-env": ^7.16.0
     "@hotwired/stimulus": ^3.0.0
     "@symfony/stimulus-bridge": ^3.2.2
+    "@symfony/ux-chartjs": "file:vendor/symfony/ux-chartjs/assets"
     "@symfony/webpack-encore": ^4.0.0
     bootstrap: ^4.6
+    chart.js: ^3.4.1 || ^4.0
     core-js: ^3.23.0
     jquery: ^3.7.1
     regenerator-runtime: ^0.13.9

@@ -4,7 +4,23 @@
 
 {% block body %}
     <div class="container-fluid mt-4">
-        <h1>Product index</h1>
+        <div class="d-flex flex-row">
+            <h1 class="me-3" >Product index</h1>
+            <div {{ stimulus_controller('modal-form', {
+                formUrl: path('app_product_admin_new')
+            }) }}
+                data-action="hidden.bs.modal->modal-form#modalHidden"
+            >
+                <button
+                    class="btn btn-primary btn-sm"
+                    data-action="modal-form#openModal"
+                >Add+</button>
+
+                {{ include('_modal.html.twig', {
+                    modalTitle: 'Add a new Product'
+                }) }}
+            </div>
+        </div>
 
         <table class="table">
             <thead>

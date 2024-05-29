@@ -7,6 +7,7 @@ use App\Form\ProductType;
 use App\Repository\ProductRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -33,13 +34,22 @@ class ProductAdminController extends AbstractController
             $entityManager->persist($product);
             $entityManager->flush();
 
+            if ($request->isXmlHttpRequest()) {
+                return new Response( null, 204 );
+            }
+
             return $this->redirectToRoute('app_product_admin_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->renderForm('product_admin/new.html.twig', [
+        $template = $request->isXmlHttpRequest() ? '_form.html.twig' : 'new.html.twig';
+
+        return $this->renderForm('product_admin/' . $template, [
             'product' => $product,
             'form' => $form,
-        ]);
+        ], new Response(
+            null,
+            $form->isSubmitted() ? 422 : 200,
+        ));
     }
 
     #[Route('/{id}', name: 'app_product_admin_show', methods: ['GET'])]

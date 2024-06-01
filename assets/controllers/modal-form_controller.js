@@ -1,6 +1,7 @@
 import { Controller } from '@hotwired/stimulus';
 import { Modal } from 'bootstrap';
 import $ from 'jquery';
+import { useDispatch } from 'stimulus-use';
 
 export default class extends Controller {
     static targets = ['modal', 'modalBody'];
@@ -9,6 +10,10 @@ export default class extends Controller {
     }
 
     modal = null;
+
+    connect() {
+        useDispatch(this, {debug: true});
+    }
 
     async openModal(event) {
         console.log(event.currentTarget);
@@ -34,6 +39,7 @@ export default class extends Controller {
                 data: $form.serialize()
             });
             this.modal.hide();
+            this.dispatch('success');
         } catch (error) {
             this.modalBodyTarget.innerHTML = error.responseText;
         }

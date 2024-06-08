@@ -6173,6 +6173,7 @@ __metadata:
     react-dom: ^18.3.1
     regenerator-runtime: ^0.13.9
     stimulus: ^3.2.2
+    stimulus-autocomplete: ^3.1.0
     stimulus-use: ^0.52.2
     sweetalert2: ^11.11.0
     webpack: ^5.74.0
@@ -6555,6 +6556,15 @@ __metadata:
   version: 1.5.0
   resolution: "statuses@npm:1.5.0"
   checksum: c469b9519de16a4bb19600205cffb39ee471a5f17b82589757ca7bd40a8d92ebb6ed9f98b5a540c5d302ccbc78f15dc03cc0280dd6e00df1335568a5d5758a5c
+  languageName: node
+  linkType: hard
+
+"stimulus-autocomplete@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "stimulus-autocomplete@npm:3.1.0"
+  peerDependencies:
+    "@hotwired/stimulus": ^3.0.0
+  checksum: 8554605193b5912c4faf2fa28a38f230e1912d8574578669bae705c199319b9308aba6153843677240641c6c6aed030d0227a3b11bb75a2102f6b62074d193e0
   languageName: node
   linkType: hard
 

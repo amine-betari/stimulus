@@ -36,13 +36,23 @@
                         <form>
                             <div
                                 class="input-group"
-                            {# {{ stimulus_controller('search-preview', {
+                                {# {{ stimulus_controller('search-preview', {
                                     url: path('app_homepage')
                                 }) }} #}
-                                {{ stimulus_controller('autocomplete', {
-                                    url: path('app_homepage', { preview: 1 })
-                                }) }}
+
+                                    {{ stimulus_controller(
+                                        'autocomplete', {
+                                            url: path('app_homepage', { preview: 1 }),
+                                            skipHiddenProperty: true
+                                        }
+                                    )|stimulus_controller(
+                                        'autocomplete-transition'
+                                    ) }}
+
+                                data-action="toggle->autocomplete-transition#toggle"
                             >
+                                {# {{ stimulus_controller('bar') | stimulus_controller('foo') }} #}
+
                                 <input
                                     name="q"
                                     value="{{ searchTerm }}"
@@ -57,6 +67,7 @@
                                     class="search-preview"
                                     {# data-search-preview-target="result" #}
                                     data-autocomplete-target="results"
+                                    data-autocomplete-transition-target="results"
                                 ></div>
 
                             </div>
